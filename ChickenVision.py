@@ -152,7 +152,10 @@ image_height = 144
 
 #Lifecam 3000 from datasheet
 #Datasheet: https://dl2jx7zfbtwvr.cloudfront.net/specsheets/WEBC1010.pdf
-diagonalView = math.radians(68.5)
+#diagonalView = math.radians(68.5)
+
+#Uncomment if using the wide angle Logitech B910 Camera
+diagonalView = math.radians(78)
 
 #16:9 aspect ratio
 horizontalAspect = 16
@@ -168,13 +171,14 @@ verticalView = math.atan(math.tan(diagonalView/2) * (verticalAspect / diagonalAs
 H_FOCAL_LENGTH = image_width / (2*math.tan((horizontalView/2)))
 V_FOCAL_LENGTH = image_height / (2*math.tan((verticalView/2)))
 #blurs have to be odd
-green_blur = 7
+green_blur = 4
 orange_blur = 27
 
 # define range of green of retroreflective tape in HSV
-lower_green = np.array([0,220,25])
-upper_green = np.array([101, 255, 255])
+lower_green = np.array([68,87,62])
+upper_green = np.array([106, 255, 255])
 #define range of orange from cargo ball in HSV
+#Not used by Team 1100
 lower_orange = np.array([0,193,92])
 upper_orange = np.array([23, 255, 255])
 
@@ -735,9 +739,9 @@ if __name__ == "__main__":
         timestamp, img = cap.read()
 
         #Uncomment if camera is mounted upside down
-        frame = flipImage(img)
+        #frame = flipImage(img)
         #Comment out if camera is mounted upside down
-        #frame = img
+        frame = img
         if timestamp == 0:
             # Send the output the error.
             streamViewer.notifyError(cap.getError());
