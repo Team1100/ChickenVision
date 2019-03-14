@@ -1,5 +1,3 @@
-<h2> Welcome to Chicken Vision </h2>
-<img src="https://github.com/team3997/ChickenVision/blob/master/StickerVision.svg"/>
 To tune vision, use GRIP (http://wpiroboticsprojects.github.io/GRIP/#/).
 <h2> Credit </h2>
 You don't have to give credit, but if you do, it is greatly appreciated if you tell us how Chicken Vision has helped you and your team: https://docs.google.com/spreadsheets/d/1YWcWk0oOwUUU_g2qIJem4bmJQUaB20VSqDUPqsKFyJk/edit?usp=sharing
