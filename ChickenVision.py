@@ -494,6 +494,7 @@ def findTape(contours, image, centerX, centerY):
         currentAngleError = finalTarget[1]
         # pushes vision target angle to network tables
         networkTable.putNumber("tapeYaw", currentAngleError)
+        networkTable.putNumber("centerOfTarget", centerOfTarget);
     else:
         # pushes that it deosn't see vision target to network tables
         networkTable.putBoolean("tapeDetected", False)
